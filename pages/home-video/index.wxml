@@ -1,0 +1,6 @@
+
+<view>
+  <block wx:for="{{topMovs}}" wx:key="id">
+    <view>{{ item.name }}</view>
+  </block>
+</view>
