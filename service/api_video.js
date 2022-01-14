@@ -1,5 +1,5 @@
 import hyRequest from "./index"
 
-export function getTopMvList(data) {
-  return hyRequest.get('/top/mv', {data})
+export function getTopMvList(params) {
+  return hyRequest.get('/top/mv',  params)
 }
