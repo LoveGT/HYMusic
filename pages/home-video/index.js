@@ -48,6 +48,11 @@
    },
    handleItemClick: function(event) {
     console.log(event, 'event');
+    const id = event.currentTarget.dataset.item.id
+    console.log(id);
+    wx.navigateTo({
+      url: '/pages/detail-video/index?id=' + id,
+    })
    },
    onPullDownRefresh: async function () {
      //  const res = await getTopMvList()
