@@ -42,7 +42,7 @@
     "ignoreUploadUnusedFiles": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.21.3",
+  "libVersion": "2.18.0",
   "appid": "wx25b2f0ff5adfb3a3",
   "projectname": "HYMusic",
   "debugOptions": {

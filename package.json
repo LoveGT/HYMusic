@@ -1,0 +1,23 @@
+{
+  "name": "hymusic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoveGT/HYMusic.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LoveGT/HYMusic/issues"
+  },
+  "homepage": "https://github.com/LoveGT/HYMusic#readme",
+  "dependencies": {
+    "@vant/weapp": "^1.10.2"
+  }
+}

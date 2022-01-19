@@ -1,1 +1,9 @@
-/* pages/detail-video/index.wxss */
+page {
+ padding-top: 450rpx;
+}
+
+.video {
+  position: fixed;
+  top: 0;
+  width: 750rpx;
+}

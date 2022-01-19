@@ -1,2 +1,15 @@
-<!--pages/home-music/index.wxml-->
-<text>pages/home-music/index.wxml</text>
+<!-- 搜索框 -->
+<van-search shape="round" background="#fafafa" value="{{ value }}" placeholder="搜索您喜欢的歌曲" bind:click-input="handleSearchClick" />
+<!-- 轮播图 -->
+<swiper class="swiper" indicator-dots circular style="height: {{swiperHeight}}px">
+  <block wx:for="{{banners}}" wx:key="{{bannerId}}">
+    <swiper-item class="swiper-item">
+      <image class="image" mode="widthFix" src="{{item.pic}}" bindload="handleSwiperImageLoaded"></image>
+    </swiper-item>
+  </block>
+</swiper>
+<van-button type="default">默认按钮</van-button>
+<van-button type="primary">主要按钮</van-button>
+<van-button type="info">信息按钮</van-button>
+<van-button type="warning">警告按钮</van-button>
+<van-button type="danger" size="mini">危险按钮</van-button>

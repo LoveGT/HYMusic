@@ -1,1 +1,19 @@
-/* pages/home-music/index.wxss */
+.van-search__content {
+  background-color: #fff !important;
+}
+
+.swiper {
+  border: 2px solid springgreen;
+}
+
+.swiper-item {
+  border: 2px solid orange;
+  display: flex;
+}
+
+.image {
+  border: 2px solid red;
+  width: 100%;
+  /* display: inline;
+  vertical-align: bottom; */
+}
