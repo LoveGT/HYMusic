@@ -2,14 +2,30 @@
 <van-search shape="round" background="#fafafa" value="{{ value }}" placeholder="搜索您喜欢的歌曲" bind:click-input="handleSearchClick" />
 <!-- 轮播图 -->
 <swiper class="swiper" indicator-dots circular style="height: {{swiperHeight}}px">
-  <block wx:for="{{banners}}" wx:key="{{bannerId}}">
+  <block wx:for="{{banners}}" wx:key="bannerId">
     <swiper-item class="swiper-item">
-      <image class="image" mode="widthFix" src="{{item.pic}}" bindload="handleSwiperImageLoaded"></image>
+      <image class="swiper-image image" mode="widthFix" src="{{item.pic}}" bindload="handleSwiperImageLoaded"></image>
     </swiper-item>
   </block>
 </swiper>
-<van-button type="default">默认按钮</van-button>
-<van-button type="primary">主要按钮</van-button>
-<van-button type="info">信息按钮</van-button>
-<van-button type="warning">警告按钮</van-button>
-<van-button type="danger" size="mini">危险按钮</van-button>
+
+<!-- 推荐歌曲 -->
+<view class="recommend-song">
+  <area-header title="推荐歌曲">
+  </area-header>
+  <view class="song-list">
+    <block wx:for="{{recommendSongs}}" wx:key="id">
+      <song-item-v1 item="{{item}}"></song-item-v1>
+    </block>
+  </view>
+</view>
+
+<!-- 热门歌单 -->
+<view class="hot-song">
+  <song-menu-area songMenu="{{hotSongMenu}}" title="热门歌单"></song-menu-area>
+</view>
+
+<!-- 推荐歌单 -->
+<view class="recommend-song">
+  <song-menu-area songMenu="{{recommendSongMenu}}" title="推荐歌单"></song-menu-area>
+</view>

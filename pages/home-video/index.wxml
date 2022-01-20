@@ -1,5 +1,2 @@
-<view class="video">
-  <view class="item" wx:for="{{topMovs}}" wx:key="id">
-    <video-item-v1 item="{{item}}" bindtap="handleItemClick" data-item="{{item}}"></video-item-v1>
-  </view>
-</view>
+<!--pages/home-video/index.wxml-->
+<text>pages/home-video/index.wxml</text>

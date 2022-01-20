@@ -1,4 +1,4 @@
-// components/video-item-v1/index.js
+// components/music-item-v1/index.js
 Component({
   /**
    * 组件的属性列表
@@ -6,7 +6,7 @@ Component({
   properties: {
     item: {
       type: Object,
-      value: () => ({})
+      value: {}
     }
   },
 
