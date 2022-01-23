@@ -1,2 +1,22 @@
-<!--pages/detail-search/index.wxml-->
-<text>pages/detail-search/index.wxml</text>
+<!-- 搜索框 -->
+<van-search shape="round" value="{{searchValue}}" background="#fafafa" placeholder="搜索您喜欢的歌曲" bind:change="handleSearchChange" />
+<view class="hot" wx:if="{{searchValue.length===0 && suggestSongs.length===0}}">
+  <area-header title="热门搜索" showRight="{{false}}"></area-header>
+  <view class="list">
+    <block wx:for="{{hotKeywords}}" wx:key="first">
+      <view class="tag">{{item.first}}</view>
+    </block>
+  </view>
+</view>
+<!-- 搜索建议 -->
+<view class="suggest" wx:elif="{{suggestSongs.length && searchValue.length}}">
+  <view class="title">搜索"{{searchValue}}"</view>
+  <view class="list">
+    <block wx:for="{{suggestSongs}}" wx:key="keyword">
+      <view class="list-item">
+        <image class="icon" mode="widthFix" src="/assets/images/icons/search_icon.png"></image>
+        <text class="text">{{item.keyword}}</text>
+      </view>
+    </block>
+  </view>
+</view>

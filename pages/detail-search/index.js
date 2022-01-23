@@ -1,20 +1,48 @@
-// pages/detail-search/index.js
+import {
+  getHotSearch,
+  getSearchSuggest
+} from "../../service/api_search"
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    hotKeywords: [],
+    suggestSongs: [],
+    searchValue: ""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getPageData()
+  },
+  // 网络请求
+  getPageData: function () {
+    getHotSearch().then(res => {
+      this.setData({
+        hotKeywords: res.result.hots
+      })
+    })
   },
 
+  handleSearchChange(event) {
+    const searchValue = event.detail
+    if(!searchValue.length){
+      this.setData({
+        suggestSongs: []
+      })
+      return
+    }
+    getSearchSuggest(searchValue).then(res=> {
+      this.setData({
+        suggestSongs: res.result.allMatch,
+        searchValue: searchValue
+      })
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

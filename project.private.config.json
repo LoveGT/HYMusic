@@ -23,15 +23,19 @@
           "name": "",
           "pathName": "pages/home-video/index",
           "query": "",
-          "launchMode": "default",
           "scene": null
         },
         {
           "name": "detail-video",
           "pathName": "pages/detail-video/index",
           "query": "id=14480854",
-          "scene": null,
-          "launchMode": "default"
+          "scene": null
+        },
+        {
+          "name": "detail-search",
+          "pathName": "pages/detail-search/index",
+          "query": "",
+          "scene": null
         }
       ]
     }

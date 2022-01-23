@@ -11,7 +11,7 @@
 
 <!-- 推荐歌曲 -->
 <view class="recommend-song">
-  <area-header title="推荐歌曲">
+  <area-header title="推荐歌曲" bind:moreBtnClick="handleMoreClick">
   </area-header>
   <view class="song-list">
     <block wx:for="{{recommendSongs}}" wx:key="id">
@@ -28,4 +28,14 @@
 <!-- 推荐歌单 -->
 <view class="recommend-song">
   <song-menu-area songMenu="{{recommendSongMenu}}" title="推荐歌单"></song-menu-area>
+</view>
+
+<!-- 巅峰榜 -->
+<view class="ranking">
+  <area-header title="巅峰榜" showRight="{{false}}" bind:moreBtnClick="handleMoreClick"></area-header>
+  <view class="rank-list">
+    <block wx:for="{{rankings}}" wx:key="index">
+      <ranking-area-item item="{{item}}" bindtap="handleRankingItemClick" data-idx="{{index}}"></ranking-area-item>
+    </block>
+  </view>
 </view>
